@@ -1,8 +1,8 @@
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
-export function GET(req:NextResponse ){
+export async function GET(request: NextRequest) {
    
    const users=[
     {id:1, name:'ali'},
