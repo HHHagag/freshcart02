@@ -1,7 +1,7 @@
 import { getTokenFn } from "@/utilities/getTokenFun";
-import { WishRes } from "../cart/interfaces/wishlist.interface";
 
-export async function getWishlist(): Promise<WishRes | null> {
+
+export async function getWishlist() {
  
    const token = await getTokenFn();
    
