@@ -2,9 +2,15 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-border-color:lab (91.6229% -.159115 -2.26791);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -118,13 +124,41 @@
 }
 
 @layer base {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.17em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  h5 {
+    font-size: 0.83em;
+  }
+  h6 {
+    font-size: 0.67em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-  }
+  @apply bg-background text-foreground;
+}
   html {
     @apply font-sans;
   }
 }
+
