@@ -1,11 +1,10 @@
-import { cookies } from 'next/headers';
 import { getToken } from "next-auth/jwt";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function proxy(req:NextRequest){
 
-    const cookiesName = process.env.NODE_ENV =='production'?'__Secure-next-auth.session-token':'next-auth.session-token'
-    const token =await getToken({req:request,secret:process.env.NEXTAUTH_SECRET,cookieName})
+
+    const token =await getToken({req})
     console.log("token");
     
     if(!!token)
